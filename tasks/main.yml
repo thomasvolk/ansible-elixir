@@ -2,13 +2,13 @@
 # tasks file for ansible-elixir
 - name: create elixir {{ elixir_release }} directory
   file:
-    path: /opt/lib/elixir-{{ elixir_release }}
+    path: /opt/elixir-{{ elixir_release }}
     state: directory
 - name: unarchive elixir {{ elixir_release }} binaries
   unarchive:
     src: https://github.com/elixir-lang/elixir/releases/download/v{{ elixir_release }}/Precompiled.zip
-    dest: /opt/lib/elixir-{{ elixir_release }}
+    dest: /opt/elixir-{{ elixir_release }}
     remote_src: yes
-    creates: /opt/lib/elixir-{{ elixir_release }}/bin/iex
+    creates: /opt/elixir-{{ elixir_release }}/bin/iex
 - name: set PATH config
   template: src=elixir.sh.j2 dest=/etc/profile.d/elixir.sh
