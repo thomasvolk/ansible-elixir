@@ -1,3 +1,4 @@
 ---
 # defaults file for ansible-elixir
 elixir_release: 1.5.1
+base_path: /opt
