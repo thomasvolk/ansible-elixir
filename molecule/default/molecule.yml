@@ -1,8 +1,6 @@
 ---
 dependency:
   name: galaxy
-  options:
-    role-file: requirements.yml
 driver:
   name: docker
 lint:
@@ -14,6 +12,10 @@ provisioner:
   name: ansible
   lint:
     name: ansible-lint
+  inventory:
+    host_vars:
+      all:
+        erlang_version: 20.1
 scenario:
   name: default
 verifier:

@@ -12,8 +12,6 @@ Role Variables
 --------------
 
 ```
-erlang_version: 20.1
-erlang_build_flags: ""
 elixir_release: 1.5.1
 base_path: /opt
 ```
@@ -26,10 +24,12 @@ Dependencies
 Example Playbook
 ----------------
 
+Use ansible-elixir role together with a erlang role. Here is an example:
 
 ```
 - hosts: all
   roles:
+    - role: ANXS.erlang
     - role: ansible-elixir
 
 ```
@@ -37,9 +37,9 @@ Example Playbook
 Testing
 -------
 
-run the test script:
+use molecule to the the role:
 
-    ./test.sh
+    molecule test
 
 License
 -------
