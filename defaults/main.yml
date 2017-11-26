@@ -1,4 +1,6 @@
 ---
 # defaults file for ansible-elixir
+erlang_version: 20.1
+erlang_build_flags: ""
 elixir_release: 1.5.1
 base_path: /opt
