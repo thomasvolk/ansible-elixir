@@ -3,6 +3,8 @@ ansible-elixir
 
 Ansible role which installs elixir.
 
+[![Build Status](https://travis-ci.org/thomasvolk/ansible-elixir.svg?branch=master)](https://travis-ci.org/thomasvolk/ansible-elixir)
+
 Requirements
 ------------
 
