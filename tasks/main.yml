@@ -10,7 +10,7 @@
   unarchive:
     src: https://github.com/elixir-lang/elixir/releases/download/v{{ elixir_release }}/Precompiled.zip
     dest: "{{ base_path }}/elixir-{{ elixir_release }}"
-    remote_src: yes
+    remote_src: 'yes'
     creates: "{{ base_path }}/elixir-{{ elixir_release }}/bin/iex"
 - name: set PATH config
   template: src=elixir.sh.j2 dest=/etc/profile.d/elixir.sh
