@@ -1,13 +1,11 @@
+---
 sudo: required
 language: python
 services:
   - docker
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -o Dpkg::Options::="--force-confold" --force-yes -y docker.io
 install:
   - pip install molecule
-  - pip install docker-py
+  - pip install docker
   - pip install ansible
 script:
-  - molecule test
+  - molecule --debug test
